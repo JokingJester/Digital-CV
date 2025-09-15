@@ -1,0 +1,201 @@
+/*Adds border box to all elements*/
+*
+{
+  box-sizing: border-box;
+}
+
+/*Sets background color, font-size, font-family, text color, line height, margin, padding, and border*/
+body{
+    /*Background Code*/
+    background: rgb(2,0,36);
+    background: linear-gradient(38deg, rgba(2,0,36,0.8603816526610644) 0%, rgba(0,0,0,0.6671043417366946) 46%, rgba(27,65,73,0.8463760504201681) 100%);
+
+    /*Font-family, color, size, and line height*/
+    font-family: "Barlow", "Rockwell", "Courier Bold", Courier, Georgia, "Times New Roman", serif;
+    color: white;
+    line-height: 1.5;
+    font-size:medium;
+
+    /*Margin, padding, and border*/
+    margin: 2rem;
+    padding: 2rem;
+    border: solid whitesmoke 2px;
+    
+}
+
+/*Adds margin and a white line through every section*/
+main section,
+footer section
+{
+  margin: 3rem 0;
+  border-top: 2px solid whitesmoke;
+}
+
+/*Aligns the Name, email, and phone number text to the center. Added a bit of padding as well*/
+header h1{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/*Changes name font-size and adds text shadow*/
+h1{
+  transition: font-size 0.3s ease;
+    font-size: 30px;
+    text-shadow: 3px 3px 5px cadetblue;
+}
+
+/*Places underline on all section headings. Also capitalizes the first letter on every heading*/
+h2{
+  transition: font-size 0.3s ease;
+    font-size: 25px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+/*Changes text color and sets default font-size. I did this because of the hover transition later in the code*/
+h3{
+  transition: font-size 0.3s ease;
+  color: aquamarine;
+    font-size: 1.17em;
+}
+
+/*----------------- Skill Highlights Table -----------------*/
+
+/* Make table fill the width and spread columns evenly */
+table {
+    width: 100%;               /* Fill the container */
+    max-width: 100%;           /* Prevent shrinking */
+    margin: auto;              /* Center if needed */
+    border-collapse: collapse; /* Clean spacing */
+    text-align: center;        /* Center text */
+}
+
+/* Spread table headers and data evenly */
+th, td {
+    padding: 0.75rem 1rem;     /* Add spacing */
+    width: 50%;                /* Each column takes half the table width */
+    text-align: center;        /* Center text in each cell */
+}
+
+/* Header style */
+th {
+    font-size: 1.2rem;
+    color: aquamarine;
+}
+
+/* Cell style */
+td {
+    font-size: 1rem;
+}
+
+/* Optional hover effect for table rows */
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*----------------- End Skill Highlights Table -----------------*/
+
+/*Spaces out the text on every div.*/
+div{
+    line-height: 2;
+}
+
+/*Removes default underline and changes text color on links */
+a{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+/*Places white border on all videos. The Youtube video is a iframe*/
+video, iframe {
+  transition: font-size 0.6s ease;
+    border: 2px solid white;
+    border-radius: 10px; /* For rounded corners */
+}
+
+/*Removes outline from form*/
+form input,
+form textarea
+{
+  outline: none;
+}
+
+/*Customized form to have black border and text color. Added padding and a white background*/
+form input,
+form textarea,
+form select
+{
+  padding: 0.1rem 0.2rem;
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+}
+
+/*Mobile Friendly*/
+@media (max-width: 768px){
+
+  /*Utilized Chat GPT as there were issues with keeping iframe and video scaling consistent. Used only on iframe, video, and text area*/
+  body {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  iframe,
+  video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 30vh;
+    font-size: 1rem;
+  }
+
+  header p{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+/*Desktop Friendly*/
+@media(min-width: 769px){
+  header p{
+    text-align: right;
+    padding-bottom: 1rem;
+  }
+
+  /*Hover Effects Only On Desktop*/
+a,.hoverText{
+  transition: font-size 0.3s;
+  font-size: medium;
+}
+
+a:hover,.hoverText:hover{
+  transition: font-size 0.3s ease;
+  font-size: larger;
+}
+
+video:hover,iframe:hover{
+  border: 2px solid turquoise;
+}
+
+h1:hover{
+  transition: font-size 0.3s ease;
+  font-size: 32px;
+  text-shadow: 6px 6px 8px cadetblue;
+}
+h2:hover{
+  transition: font-size 0.3s ease;
+  font-size: 27px;
+}
+
+h3:hover{
+  transition: font-size 0.3s ease;
+  font-size: 1.2em;
+}
+}
